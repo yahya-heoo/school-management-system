@@ -1,0 +1,22 @@
+<?php
+return [
+    'refunds'=>'refunds',
+    'refund'=>'refund',
+    'add_refund'=>'Add Refunds',
+    'type'=>"Ivoice's Type",
+    'amount'=>'Refund Amount',
+    'reason'=>'Reason',
+    'edit_refund'=>'Edit refund',
+    'deleteQ'=>'Are you sure to delete this refund ?',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+];

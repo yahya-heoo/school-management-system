@@ -1,0 +1,22 @@
+<?php
+return [
+    'invoices'=>'Invoices',
+    'invoice'=>'Invoice',
+    'add_invoice'=>'Add Invoice',
+    'type'=>"Invoices's Type",
+    'amount'=>"Invoices's Amount",
+    'description'=>"Invoices's Description",
+    'edit_invoice'=>'Edit Invoice',
+    'deleteQ'=>'Are you sure to delete this invoice ?',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+];

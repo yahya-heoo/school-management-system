@@ -18,6 +18,7 @@ A comprehensive Laravel-based school management system designed to streamline ed
 - **Online Classes**: Zoom integration for virtual classroom sessions
 - **Library Management**: Digital resource management and distribution
 - **Parent Portal**: Dedicated parent information management with multi-step forms
+- **Toast Notifications**: PHPFlasher with Toastr templates for user feedback
 
 ### Technical Features
 
@@ -27,31 +28,37 @@ A comprehensive Laravel-based school management system designed to streamline ed
 - **Livewire Integration**: Reactive components for complex forms
 - **Soft Deletes**: Data recovery capabilities for critical records
 - **Zoom API Integration**: Automated online meeting management
+- **PHPFlasher Notifications**: Flash messages and toast notifications via `toastr()` helper
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Laravel 9.x
-- **PHP**: 8.0+
+- **Framework**: Laravel 12.x
+- **PHP**: 8.3+
+- **Composer**: 2.x
 - **Database**: MySQL
 - **Frontend**: Blade Templates, TailwindCSS
-- **Real-time**: Livewire 2.x
-- **API Integration**: Zoom API
+- **Real-time**: Livewire 3.x
+- **Frontend Build**: Vite 6.x
+- **Authentication**: Laravel Sanctum 4.x
+- **Notifications**: PHPFlasher 2.x (Toastr)
+- **Testing**: PHPUnit 11.x
+- **API Integration**: Zoom API (QuickZoom)
 - **Localization**: mcamara/laravel-localization
 - **File Management**: Custom attachment handling system
 
 ## 📋 Prerequisites
 
-- PHP >= 8.0
-- Composer
+- PHP >= 8.3
+- Composer 2.x
 - MySQL
-- Node.js & NPM
+- Node.js >= 20 & NPM
 
 ## 🔧 Installation
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/school-management-system.git
+git clone https://github.com/yahya-heoo/school-management-system.git
 cd school-management-system
 ```
 
@@ -65,7 +72,16 @@ npm install
 3. Environment setup
 
 ```bash
+# Linux/macOS
 cp .env.example .env
+
+# Windows PowerShell
+Copy-Item .env.example .env
+```
+
+Generate the application key:
+
+```bash
 php artisan key:generate
 ```
 
@@ -85,7 +101,17 @@ php artisan db:seed
 php artisan storage:link
 ```
 
-6. Run development server
+6. Install package resources (PHPFlasher & QuickZoom)
+
+```bash
+php artisan flasher:install
+php artisan quickzoom:install
+```
+
+   > **Note**: After installing QuickZoom, add your Zoom API credentials to `.env`:
+   > `ZOOM_API_KEY`, `ZOOM_API_SECRET`, `ZOOM_ACCOUNT_ID` (OAuth 2.0 Server-to-Server).
+
+7. Run development server
 
 ```bash
 php artisan serve
@@ -96,7 +122,7 @@ npm run dev
 
 **⚠️ This project is currently undergoing active improvements**
 
-The system is fully functional but being enhanced with:
+The system is functional but being enhanced with:
 
 - Performance optimization (database indexing, query optimization)
 - Code quality improvements (standardization, documentation)
@@ -151,8 +177,6 @@ This project serves as a demonstration of Laravel best practices including:
 - Complex form handling with Livewire
 
 **Current Development Focus**: Performance optimization and code quality enhancements
-
-
 
 ## License
 

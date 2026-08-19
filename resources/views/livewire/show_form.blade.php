@@ -1,6 +1,5 @@
 @extends('layouts.master')
 @section('css')
-@livewireStyles
 @section('title')
 @if($editMode ?? false)
 {{ trans('Parent_trans.edit_parent') }}
@@ -59,5 +58,4 @@
 <!-- row closed -->
 @endsection
 @section('js')
-@livewireScripts
 @endsection

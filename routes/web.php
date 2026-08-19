@@ -81,7 +81,7 @@ Route::group(
         Route::post('delete_all', [ClassroomController::class, 'delete_all'])->name('delete_all');
 
         Route::post('filter_Classes', [ClassroomController::class, 'filter_Classes'])->name('filter_Classes');
-        Route::get('filter_Classes', [ClassroomController::class, 'filter_Classes'])->name('filter_Classes');
+        Route::get('filter_Classes', [ClassroomController::class, 'filter_Classes'])->name('filter_Classes.get');
 
 
         Route::get('classes/{id}', [SectionController::class, 'getClasses']);

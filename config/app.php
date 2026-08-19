@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        QuickZoom\Providers\QuickZoomServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -192,7 +193,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+        'QuickZoom' => \QuickZoom\Facades\QuickZoom::class,
     ])->toArray(),
 
 ];
